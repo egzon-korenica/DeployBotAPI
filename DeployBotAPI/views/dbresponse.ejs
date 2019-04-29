@@ -1,0 +1,34 @@
+<h1><%= selector.toUpperCase() %></h1>
+
+<ul>
+<% data.entries.forEach(function(query){ %>
+    <% if (selector == "servers") { %>
+    <li>
+        <strong>ID: </strong>:<%= query.id %> - 
+        <strong>NAME: </strong><%= query.name %> - 
+        <strong>PROTOCOL: </strong><%= query.protocol %> - 
+        <strong>REPO_ID: </strong><%= query.repository_id %> - <%= query.environment_id %> - 
+        <strong>CREATED AT: </strong><%= query.created_at %>
+    </li>
+    <% } if(selector == "environments"){ %>
+        <li>
+        <strong>ID: </strong><%= query.id %> - 
+        <strong>NAME: </strong><%= query.name %> - 
+        <strong>CURRENT VERSION: </strong><%= query.current_version %> - 
+        <strong>AUTOMATIC: </strong><%= query.is_automatic %> - 
+        <strong>BRANCH NAME: </strong><%= query.branch_name %> - 
+        <strong>CREATED AT: </strong><%= query.created_at %>
+        </li>
+    <% } %>
+    <% if(selector == "repositories"){ %>
+        <li>
+        <strong>ID: </strong><%= query.id %> - 
+        <strong>NAME: </strong><%= query.name %> - 
+        <strong>TITLE: </strong><%= query.title %> - 
+        <strong>COLOR: </strong><%= query.color_label %> - 
+        <strong>TYPE: </strong><%= query.type %> - <%= query.url %> - 
+        <strong>CREATED AT: </strong><%= query.created_at %>
+        </li>
+    <% } %>
+<% }); %>
+</ul>

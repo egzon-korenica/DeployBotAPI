@@ -1,0 +1,11 @@
+<h1>DeployBot API</h1>
+<form action="/deploybotResponse" method="GET">
+    <input type="text" placeholder="domain" name="domain" require>
+    <input type="text" placeholder="API Token" name="token" require>
+    <select name="select">
+      <option value="repositories">Repositories</option>
+      <option value="environments">Environments</option>
+      <option value="servers">Servers</option>
+    </select>
+    <button>Submit</button>
+</form>

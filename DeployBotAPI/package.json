@@ -1,0 +1,16 @@
+{
+  "name": "dbapi",
+  "version": "1.0.0",
+  "description": "Testing DeployBot's API",
+  "main": "deploybotAPI.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Egzon Korenica",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
